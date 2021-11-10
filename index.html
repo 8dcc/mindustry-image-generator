@@ -1,69 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="index.css">
     <title>Mindustry Image Generator</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="main">
-    <h1>Mindustry Image Generator</h1>
-    <p><a href="https://github.com/r4v10l1/mindustry-image-generator/">Github repository</a> - <a href="https://sudobeans.github.io/mindustry-image-generator/">1 processor version.</a></p>
+        <h1>Mindustry Image Generator</h1>
+        <p><a href="https://github.com/r4v10l1/mindustry-image-generator/">Github repository</a> - <a href="https://sudobeans.github.io/mindustry-image-generator/">1 processor version.</a></p>
 
-    <!-- Text box at the top of the page -->
-    <div class="textboxborder">
-      <p>Converts images into code for a Mindustry Micro Processor, so that you can print images on logic displays in the game.</p>
-      <p>The image you upload will be resized to a 40x40 image so it can be displayed correctly.</p>
-      <p>NOTE: If the copy buttons don't work, try copying the code by right-clicking on it.</p>
-      <img src="images/working-picture2.png" alt="Logic display showing the vim logo."> <!-- Image is from https://commons.wikimedia.org/wiki/File:Sunflower_sky_backdrop.jpg -->
-      
-      <!-- collapsible how to menu -->
-      <button type="button" class="collapsible">How to use</button>
-      <div class="content">
-        <ol>
-          <li>Copy this schematic.
-            <button onclick="copySchematic()">Copy code</button>
-            <input id="schematicTextArea" value="If you are seeing this text, something isn't working!">
-          </li>
-          <li>Import the schematic into the game. If you don't know how, <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1933022628">this guide might help you.</a></li>
-          <li>Place down the schematic.</li>
-          <li>Upload your image to this website.</li>
-          <li>Copy the code generated from your image.</li>
-          <li>
-            Import that code into the Micro Processor in the game:
-            <ol>
-              <li>Click the Micro Processor block.</li>
-              <li>Click the pen that shows up under it.</li>
-              <li>Inside the menu, click the "Edit" button.</li>
-              <li>Click "Import from clipboard."</li>
-            </ol>
-          </li>
-          <li>Then, click the switch block next to the Micro Processor.</li>
-        </ol>
-      </div> 
-    </div>
+        <!-- Text box at the top of the page -->
+        <div class="textboxborder1">
+            <p>Converts images into code for a Mindustry Micro Processor, so that you can print images on logic displays in the game.</p>
+            <p>The image you upload will be resized to a 40x40 image so it can be displayed correctly.</p>
+            <p>NOTE: If the copy buttons don't work, try copying the code by right-clicking on it.</p>
+            <img src="images/working-picture2.png" alt="Logic display showing the vim logo."> <!-- Image is from https://commons.wikimedia.org/wiki/File:Sunflower_sky_backdrop.jpg -->
 
-    <!-- Image uploading area -->
-    <div> 
-        <h2>Upload an image:</h2>
-        <input type="file" id="fileInput" name="file" />
-        <h2>Your image:</h2>
-        <img id="imageSrc" alt="No Image" />
-        <h2>Your image (resized preview):</h2>
-        <canvas id="resizedImageCanvas"></canvas>
-    </div>
-    
-    <!-- Code output area -->
-    <div>
-      <h2>Code generated from the image:</h2>
-      <div class="textboxborder">
-        <textarea id="codeoutput0" class="codeoutput" rows="6" cols="25">Your code will show up once you upload an image!</textarea>
-        <textarea id="codeoutput1" class="codeoutput" rows="6" cols="25">Your code will show up once you upload an image!</textarea>
-        <textarea id="codeoutput2" class="codeoutput" rows="6" cols="25">Your code will show up once you upload an image!</textarea>
-        <textarea id="codeoutput3" class="codeoutput" rows="6" cols="25">Your code will show up once you upload an image!</textarea>
-      </div>
-    </div>
-  </body>
-  <script src="index.js" type="text/javascript"></script>
-  <script src="opencv.js" type="text/javascript"></script>
+            <!-- collapsible how to menu -->
+            <button type="button" class="collapsible">How to use</button>
+            <div class="content">
+                <ol>
+                    <li>Copy this schematic.
+                        <button onclick="copySchematic()">Copy code</button>
+                        <input id="schematicTextArea" value="If you are seeing this text, something isn't working!">
+                    </li>
+                    <li>Import the schematic into the game. If you don't know how, <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1933022628">this guide might help you.</a></li>
+                    <li>Place down the schematic.</li>
+                    <li>Upload your image to this website.</li>
+                    <li>Copy the code generated from your image.</li>
+                    <li>
+                        Import that code into the Micro Processor in the game:
+                        <ol>
+                            <li>Click the Micro Processor block.</li>
+                            <li>Click the pen that shows up under it.</li>
+                            <li>Inside the menu, click the "Edit" button.</li>
+                            <li>Click "Import from clipboard."</li>
+                        </ol>
+                    </li>
+                    <li>Then, click the switch block next to the Micro Processor.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Image uploading area -->
+        <div>
+            <h2>Upload an image:</h2>
+            <input type="file" id="fileInput" name="file" />
+            <h2>Your image:</h2>
+            <img id="imageSrc" alt="No Image" />
+            <h2>Your image (resized preview):</h2>
+            <canvas id="resizedImageCanvas"></canvas>
+        </div>
+
+        <!-- Code output area -->
+        <div>
+            <h2>Code generated from the image:</h2>
+            <div class="textboxborder2">
+                <button class="cbutton" onclick="copyCodeOutput(0)">Copy code</button>
+                <textarea id="codeoutput0" class="codeoutput" rows="8" cols="25">Your code will show up once you upload an image!</textarea>
+                <button class="cbutton" onclick="copyCodeOutput(1)">Copy code</button>
+                <textarea id="codeoutput1" class="codeoutput" rows="8" cols="25">Your code will show up once you upload an image!</textarea>
+                <button class="cbutton" onclick="copyCodeOutput(2)">Copy code</button>
+                <textarea id="codeoutput2" class="codeoutput" rows="8" cols="25">Your code will show up once you upload an image!</textarea>
+                <button class="cbutton" onclick="copyCodeOutput(3)">Copy code</button>
+                <textarea id="codeoutput3" class="codeoutput" rows="8" cols="25">Your code will show up once you upload an image!</textarea>
+            </div>
+        </div>
+</body>
+<script src="index.js" type="text/javascript"></script>
+<script src="opencv.js" type="text/javascript"></script>
+
 </html>
