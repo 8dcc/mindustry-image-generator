@@ -10,4 +10,4 @@ I don't have very much experience in web development, so a lot of my code may be
 
 ---
 
-Edit: Tried making it for 160px but it does not work, I will try to make it with python or something.
+Edit: I know how to make it work with 160 (Need more than one procesor).
