@@ -1,65 +1,108 @@
 body {
-  font-family: sunflower;
-  background-color: #36393f;
-  color: white;
-  padding: 10px;
+    font-family: sunflower;
+    background-color: #36393f;
+    color: white;
+    padding: 10px;
 }
 
-a {
-  color: lightskyblue;
+:root {
+    scrollbar-width: thin;
 }
+
+/* ----------------------------------------------------- */
+a {
+    color: lightskyblue;
+}
+
 a:hover {
-  color: lightseagreen;
+    color: lightseagreen;
 }
 
 @font-face {
-  font-family: sunflower;
-  src: url(Sunflower-Light.ttf);
+    font-family: sunflower;
+    src: url(Sunflower-Light.ttf);
 }
 
-h2{
-  font-weight: normal;
+h2 {
+    font-weight: normal;
 }
 
 .codeoutput {
-  font-family: monospace;
-  white-space: pre-line;
+    font-family: monospace;
+    white-space: pre-line;
 }
 
-.textboxborder {
-  max-width: 50%;
-
-  border-style: solid;
-  border-width: 0.1em;
-  border-radius: 0.5em;
-  border-color: #4c4f54;
-  
-  padding: 1em;
+.textboxborder1 {
+    max-width: 45%;
+    border-style: solid;
+    border-width: 0.1em;
+    border-radius: 0.5em;
+    border-color: #4c4f54;
+    padding: 1em;
 }
 
-/* This styling adds functionality to the collapsible menus. 
+.textboxborder2 {
+    display: flex;
+    max-width: 60%;
+    border-style: solid;
+    border-width: 0.1em;
+    border-radius: 0.5em;
+    border-color: #4c4f54;
+    padding:  1em 1em 1em 10px;
+}
+
+textarea {
+    outline: none;
+    resize: none;
+    overflow: auto;
+    scrollbar-width: thin;
+
+    border: 1px solid #25272b;
+    border-radius: 0px;
+}
+
+button {
+    border: 1px solid;
+    border-radius: 0px;
+}
+
+.cbutton {
+    margin: 0px 2px 0px 15px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    transition-duration: 0.2s;
+    border: 1px solid #25272b;
+    border-radius: 0px;
+}
+
+.cbutton:hover {
+  background-color: #25272b;
+  color: white;
+}
+
+/* This styling adds functionality to the collapsible menus.
   Stolen from https://www.w3schools.com/howto/howto_js_collapsible.asp */
 .collapsible {
-  background-color: #444;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #556;
-} 
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #556;
+}
