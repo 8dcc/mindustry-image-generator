@@ -28,7 +28,7 @@ for (i = 0; i < collapsibleMenus.length; i++) {
 
 // Generates and displays the code when an image is uploaded
 imgElement.onload = function() {
-  let newSize = new cv.Size(20, 20); // The resolution of the image for the display
+  let newSize = new cv.Size(40, 40); // The resolution of the image for the display
 
   let uploadedImage = cv.imread(imgElement); // Loads the uploaded image as an OpenCV mat
   let resizedImage = new cv.Mat();
@@ -36,7 +36,7 @@ imgElement.onload = function() {
   cv.resize(uploadedImage, resizedImage, newSize, cv.INTER_NEAREST); // Resizes the image
   cv.imshow('resizedImageCanvas', resizedImage);
 
-  codeoutput.value = imageToCode(resizedImage, 80);
+  codeoutput.value = imageToCode(resizedImage, 160);
 
   uploadedImage.delete();
   resizedImage.delete();
