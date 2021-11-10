@@ -2,7 +2,9 @@
   <a target="_blank" href="https://github.com/r4v10l1/discord-bot">
     <img align="center" height="90em" src="images/logo.png" alt="Logo" />
   </a>
-  <h1>Mindustry image generator</h1><br>
+  <h1>Mindustry image generator</h1>
+  <a href="https://github.com/r4v10l1/mindustry-image-generator/network/members"><img src="https://img.shields.io/github/forks/r4v10l1/mindustry-image-generator.svg?style=for-the-badge&logo=html5&color=e34c26&logoColor=e34c26" alt="Forks"></a>
+  <a href="https://github.com/r4v10l1/mindustry-image-generator/stargazers"><img src="https://img.shields.io/github/stars/r4v10l1/mindustry-image-generator.svg?style=for-the-badge&logo=html5&color=e34c26&logoColor=e34c26" alt="Stars"></a><br><br>
 </div>
 
 This is a web app used to convert an image into code for a Mindustry Micro Processor, so that you can print images on logic displays in the game. You need to have Mindustry 6.0. To use this, go to [the github.io page](https://r4v10l1.github.io/mindustry-image-generator/). This page also explains how to use it.
