@@ -25,6 +25,10 @@ h2{
   white-space: pre-line;
 }
 
+#codeoutput-hidden {
+  display: none;
+}
+
 .textboxborder {
   max-width: 50%;
 
