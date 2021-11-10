@@ -6,8 +6,4 @@ This is a web app used to convert an image into code for a Mindustry Micro Proce
 
 #
 
-I don't have very much experience in web development, so a lot of my code may be in poor style. Much of it was copied from the [openCV tutorials](https://docs.opencv.org/3.4/d5/d10/tutorial_js_root.html) and [W3Schools](https://www.w3schools.com/default.asp).
-
----
-
-Edit: I know how to make it work with 160 (Need more than one procesor).
+This is a fork of [sudobeans/mindustry-image-generator](https://github.com/sudobeans/mindustry-image-generator), but instead of using a [small display](https://sudobeans.github.io/mindustry-image-generator/), I use the bigger one with 4 processors.
