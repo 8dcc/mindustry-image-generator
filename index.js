@@ -43,13 +43,6 @@ imgElement.onload = function() {
 };
 
 // Selects and copies the code in the code box
-function copyCodeOutput() {
-  codeoutput.select();
-  codeoutput.setSelectionRange(0, 999999);
-  document.execCommand("copy")
-}
-
-// Selects and copies the code in the code box
 function copySchematic() {
   schematicTextArea.select();
   schematicTextArea.setSelectionRange(0, 999999);
